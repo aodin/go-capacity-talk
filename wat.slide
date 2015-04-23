@@ -3,15 +3,17 @@ A wat moment in Go
 Tags: go, golang, slice, array, capacity
 
 Aaron O. Ellis
-Developer, Galvanize
+Lead Developer, Galvanize
 aaron.o.ellis@gmail.com
 http://aaronoellis.com/
 @aaronoellis
 
 * Wat
 
-- The only proper response to something that makes absolutely no sense.
-.image ./img/img2.jpg
+The only proper response to something that makes absolutely no sense.
+
+.link https://www.destroyallsoftware.com/talks/wat Gary Bernhardt at CodeMash 2012
+.image ./img/wat.gif
 
 * I had a bug
  
@@ -39,13 +41,24 @@ http://aaronoellis.com/
 
 * The Problem
 
-.play ./example/example.go
+.play ./problem/main.go
 
 * A slice is part magic
 
-- Two great blog posts on slices
+    type sliceHeader struct {
+        Length        int
+        ZerothElement *byte
+    }
+
+.image ./img/slice_internals.png
 .link https://blog.golang.org/slices
 .link http://blog.golang.org/go-slices-usage-and-internals
+
+* The solution
+
+Copy the slice
+
+.play ./solution/main.go
 
 * This talk is on GitHub
 
@@ -53,5 +66,9 @@ http://aaronoellis.com/
 
 * Shameless Plug
 
-- Galvanize is hiring
+Galvanize is hiring 30+ positions, including:
+- Senior Developer
+- Developer
+- Front-end Developer
+
 .link https://jobs.lever.co/galvanize
