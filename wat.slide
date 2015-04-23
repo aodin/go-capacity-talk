@@ -1,28 +1,55 @@
-A Wat Moment in Go
+A wat moment in Go
 22 Apr 2015
 Tags: go, golang, slice, array, capacity
 
 Aaron O. Ellis
 Developer, Galvanize
-aaronoellis@gmail.com
+aaron.o.ellis@gmail.com
 http://aaronoellis.com/
 @aaronoellis
 
+* Wat
+
+- The only proper response to something that makes absolutely no sense.
+.image ./img/img2.jpg
+
 * I had a bug
  
-.code capacity.go
-
-* Passing
-
-.code shallow_test.go /START OMIT/,/END OMIT/
-
-* Failing
-
-.code deep_test.go /START OMIT/,/END OMIT/
+.code capacity.go /START OMIT/,/END OMIT/
 
 * 
 
-.image ./img1.jpg
+.code shallow_test.go /START OMIT/,/END OMIT/
+
+* Passing
+
+.image ./img/passing.png
+
+* 
+
+.code deep_test.go /START OMIT/,/END OMIT/
+
+* Failing
+
+.image ./img/failing.png
+
+* 
+
+.image ./img/img1.jpg
+
+* The Problem
+
+.play ./example/example.go
+
+* A slice is part magic
+
+- Two great blog posts on slices
+.link https://blog.golang.org/slices
+.link http://blog.golang.org/go-slices-usage-and-internals
+
+* This talk is on GitHub
+
+.link https://github.com/aodin/go-capacity-talk
 
 * Shameless Plug
 

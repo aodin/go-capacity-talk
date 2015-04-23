@@ -2,6 +2,12 @@ package capacity
 
 import "reflect"
 
+// START OMIT
+type output struct {
+	name  string
+	index []int
+}
+
 func recurse(index []int, elem reflect.Type) (out []output) {
 	for i := 0; i < elem.NumField(); i += 1 {
 		field := elem.Field(i)
@@ -18,7 +24,4 @@ func recurse(index []int, elem reflect.Type) (out []output) {
 	return
 }
 
-type output struct {
-	name  string
-	index []int
-}
+// END OMIT
