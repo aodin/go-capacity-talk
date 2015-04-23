@@ -1,0 +1,30 @@
+A Wat Moment in Go
+22 Apr 2015
+Tags: go, golang, slice, array, capacity
+
+Aaron O. Ellis
+Developer, Galvanize
+aaronoellis@gmail.com
+http://aaronoellis.com/
+@aaronoellis
+
+* I had a bug
+ 
+.code capacity.go
+
+* Passing
+
+.code shallow_test.go /START OMIT/,/END OMIT/
+
+* Failing
+
+.code deep_test.go /START OMIT/,/END OMIT/
+
+* 
+
+.image ./img1.jpg
+
+* Shameless Plug
+
+- Galvanize is hiring
+.link https://jobs.lever.co/galvanize
