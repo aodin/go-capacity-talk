@@ -5,14 +5,13 @@ import "fmt"
 func main() {
 	var array [2]int
 	slice := array[:1]
-	fmt.Println(slice, len(slice), cap(slice))
+	fmt.Println("Initial", slice, len(slice), cap(slice))
 
-	var outputs [][]int
-
-	for i := 0; i < 3; i += 1 {
-		output := make([]int, len(slice))
-		copy(output, slice)
-		outputs = append(outputs, append(output, i))
+	var outputs [3][]int
+	for i, _ := range outputs {
+		outputs[i] = make([]int, len(slice))
+		copy(outputs[i], slice)
+		outputs[i] = append(outputs[i], i)
 	}
-	fmt.Println(outputs)
+	fmt.Println("Result:", outputs)
 }

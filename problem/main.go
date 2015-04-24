@@ -3,14 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	var array [1]int // Switch between [1]int and [2]int
+	var array [2]int // Switch between [1]int and [2]int
 	slice := array[:1]
-	fmt.Println(slice, len(slice), cap(slice))
+	fmt.Println("Initial", slice, len(slice), cap(slice))
 
-	var outputs [][]int
-
-	for i := 0; i < 3; i += 1 {
-		outputs = append(outputs, append(slice, i))
+	var outputs [3][]int
+	for i, _ := range outputs {
+		outputs[i] = append(slice, i)
 	}
-	fmt.Println(outputs)
+	fmt.Println("Result:", outputs)
 }
